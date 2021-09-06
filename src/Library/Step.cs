@@ -23,7 +23,7 @@ namespace Full_GRASP_And_SOLID.Library
         {
             get
             {
-                return this.Input.UnitCost;
+                return this.Input.UnitCost * this.Quantity;
             }
         }
 
