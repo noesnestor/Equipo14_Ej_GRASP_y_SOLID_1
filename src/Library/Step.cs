@@ -4,6 +4,9 @@
 // </copyright>
 //-------------------------------------------------------------------------------
 
+using System;
+using System.Collections;
+
 namespace Full_GRASP_And_SOLID.Library
 {
     public class Step
@@ -15,6 +18,23 @@ namespace Full_GRASP_And_SOLID.Library
             this.Time = time;
             this.Equipment = equipment;
         }
+        
+        public double UnitCostSubTotal
+        {
+            get
+            {
+                return this.Input.UnitCost;
+            }
+        }
+
+        public double EquipmentSubTotal
+        {
+            get
+            {
+                return ((Convert.ToDouble(this.Time)) / (60 * 60)) * this.Equipment.HourlyCost;
+            }
+        }
+
 
         public Product Input { get; set; }
 
